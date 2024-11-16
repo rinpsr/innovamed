@@ -1,0 +1,447 @@
+/* Warna Utama (Biru untuk kesan profesional dan menenangkan) */
+:root {
+  --primary-color: #40e0d0; /* Turquoise sebagai warna utama untuk elemen penting */
+  --secondary-color: #c8a2c8; /* Lilac sebagai warna latar belakang lembut */
+  --accent-color: #ffa500; /* Oranye untuk elemen interaktif atau CTA */
+
+  /* Warna Teks */
+  --text-color-primary: #333333; /* Teks utama dengan warna abu gelap */
+  --text-color-secondary: #add8e6; /* Teks deskripsi abu lembut */
+
+  /* Warna Latar Belakang */
+  --background-color: #34a2da; /* Biru muda untuk latar utama */
+  --background-light: #e0ffff; /* Latar belakang ringan (light cyan) untuk kontras */
+
+  /* Warna Tambahan */
+  --border-color: #dee2e6; /* Border abu lembut */
+  --highlight-color: #32cd32; /* Hijau terang untuk elemen kesehatan atau keberhasilan */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color-primary);
+  /* min-height: 3000px; */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.logo {
+  width: 40px; /* Sesuaikan ukuran lebar sesuai keinginan Anda */
+  height: auto;
+  margin-right: 10px; /* Memberi jarak antara logo dan teks */
+  vertical-align: middle; /* Menyelaraskan logo dengan teks */
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary-color);
+}
+
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary-color);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary-color);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary-color);
+}
+
+#menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-logo {
+  width: 120px; /* atur ukuran logo sesuai keinginan */
+  height: auto;
+  filter: brightness(0.8);
+  margin-bottom: 10px; /* memberi jarak antara logo dan teks di bawahnya */
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  border-bottom: 0.1rem solid var(--primary-color);
+  background: linear-gradient(
+    0deg,
+    rgba(54, 169, 225, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 70rem;
+}
+
+.hero .content h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary-color);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  color: var(--text-color-secondary);
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* About Section */
+
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.produk h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.produk h2 span {
+  color: #333333;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 95%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1 rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.about .row .content p {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+  text-align: justify;
+}
+
+/* Produk Section */
+
+.produk {
+  padding: 8rem 2%; /* Mengurangi padding kiri dan kanan dari 7% ke 4% */
+}
+
+.produk h2 {
+  margin-bottom: 0.5rem;
+}
+
+.produk p {
+  text-align: center;
+  max-width: 60rem;
+  margin: auto;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+.produk .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+  gap: 1rem; /* Mengatur jarak antar produk */
+}
+
+.produk .row .produk-card {
+  flex: 0.5 0.5 18%; /* Mengatur setiap card produk agar berukuran sekitar 18% dari baris, memungkinkan lima card per baris */
+  text-align: center;
+  padding-bottom: 1.5rem;
+  margin: 0.25rem 0.25rem; /* Mengurangi margin kiri dan kanan untuk mendekatkan produk */
+}
+
+.produk .row .produk-card img {
+  border-radius: 50%;
+  width: 60%;
+  width: 200px; /* Atur lebar gambar menjadi 300px */
+  height: 200px; /* Tinggi otomatis mengikuti proporsi gambar */
+}
+
+.produk .row .produk-card .produk-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--text-color-secondary);
+  text-align: center;
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+}
+
+footer .social {
+  padding: 0.5rem 0;
+}
+
+footer .social a {
+  margin: 1rem;
+}
+
+footer .social a:hover {
+  color: var(--background-color);
+}
+
+footer .links {
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  padding: 0.25rem 0.25rem;
+}
+
+footer .links a:hover {
+  color: var(--background-color);
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: #696868;
+  font-weight: 700;
+}
+
+/* General Styling */
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 50px;
+  background-color: #d4f1f4;
+  border-radius: 10px;
+}
+
+/* Content Styling */
+.contact-content {
+  max-width: 450px;
+  text-align: left;
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  color: #003e6b;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.contact-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #4a4a4a;
+  text-align: left;
+}
+
+/* WhatsApp Contact Styling */
+.whatsapp-contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.whatsapp-contact img {
+  width: 50px;
+  height: 50px;
+}
+
+.whatsapp-contact p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Image Styling */
+.contact-image img {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-left: 0;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--background-color);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .contact-image img {
+    flex-direction: column;
+    text-align: left;
+    margin-top: 20px;
+    max-width: 50%;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
