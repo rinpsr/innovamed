@@ -178,51 +178,59 @@ body {
 
 /* About Section */
 
+/* About Section */
 .about {
-  padding: 8rem 7% 1.4rem;
+  max-width: 1200px; /* Lebar maksimum yang diinginkan */
+  margin: 0 auto; /* Untuk menempatkan konten di tengah dengan jarak seimbang */
+  padding: 8rem 1.5rem; /* Jarak atas-bawah dan kanan-kiri */
+  text-align: center;
 }
 
-.about h2,
-.produk h2 {
-  text-align: center;
+.about h2 {
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
-.about h2 span,
-.produk h2 span {
-  color: #333333;
-}
-
 .about .row {
   display: flex;
+  justify-content: center; /* Mengatur agar konten berada di tengah */
+  gap: 2rem;
+  margin-bottom: 3rem; /* Memberikan jarak antar bagian */
 }
 
-.about .row .about-img {
-  flex: 1 1 45rem;
+.about .content {
+  max-width: none;
+  padding: 0 1rem;
 }
 
-.about .row .about-img img {
-  width: 95%;
+.about .content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.about .row .content {
-  flex: 1 1 35rem;
-  padding: 0 1 rem;
-}
-
-.about .row .content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+.about .content p {
   text-align: justify;
-}
-
-.about .row .content p {
+  max-width: 60rem;
+  margin: auto;
   font-size: 1.4rem;
-  margin-bottom: 0.8rem;
   font-weight: 300;
   line-height: 1.6rem;
+}
+
+.about ul {
+  list-style-type: circle;
   text-align: justify;
+  max-width: 60rem;
+  margin: auto;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+.about ul li {
+  margin-bottom: 10px;
+  color: #444;
 }
 
 /* Produk Section */
@@ -232,6 +240,8 @@ body {
 }
 
 .produk h2 {
+  text-align: center;
+  font-size: 2.6rem;
   margin-bottom: 0.5rem;
 }
 
